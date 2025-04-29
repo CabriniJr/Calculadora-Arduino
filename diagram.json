@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "author": "Luigi Cabrini",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 16.2, "left": 175.6, "attrs": {} },
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 265.8,
+      "left": 135.8,
+      "rotate": 90,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -176,
+      "left": 188,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -117.2,
+      "left": 543.2,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "lcd1:GND", "bb1:tn.1", "black", [ "h-28.8", "v153.6", "h48" ] ],
+    [ "lcd1:VCC", "bb1:tp.2", "red", [ "h-19.2", "v134.5", "h48" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "h-38.4", "v605.1" ] ],
+    [ "lcd1:SDA", "uno:A4", "green", [ "h-48", "v595.4" ] ],
+    [ "keypad1:R1", "uno:9", "blue", [ "v0" ] ],
+    [ "keypad1:R2", "uno:8", "blue", [ "v0" ] ],
+    [ "keypad1:R3", "uno:7", "blue", [ "v0" ] ],
+    [ "keypad1:R4", "uno:6", "blue", [ "v0" ] ],
+    [ "keypad1:C1", "uno:5", "orange", [ "v0" ] ],
+    [ "keypad1:C2", "uno:4", "orange", [ "v0" ] ],
+    [ "keypad1:C3", "uno:3", "orange", [ "v0" ] ],
+    [ "keypad1:C4", "uno:2", "orange", [ "v0" ] ],
+    [ "bb1:tp.25", "bb1:bp.25", "red", [ "v0.3", "h40", "v172.8" ] ],
+    [ "bb1:tn.25", "bb1:bn.25", "black", [ "v-0.1", "h49.6", "v172.8" ] ],
+    [ "bb1:bp.1", "uno:5V", "red", [ "v-0.9", "h-94.4", "v182.4" ] ],
+    [ "bb1:bn.1", "uno:GND.2", "black", [ "v-1.3", "h-84.8", "v192" ] ]
+  ],
+  "dependencies": {}
+}
