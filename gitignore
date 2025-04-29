@@ -1,0 +1,23 @@
+# Arquivos temporários
+*.tmp
+*.bak
+*.swp
+
+# Arquivos de compilação
+*.o
+*.d
+*.elf
+*.hex
+
+# Arquivos gerados pela IDE Arduino
+*.cpp.*
+*.ino.*
+build/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Outros
+.vscode/
+*.log
